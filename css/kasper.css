@@ -179,6 +179,17 @@ header nav .form i {
   transform: translateY(-50%);
   right: 0;
 }
+header nav .form input {
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+  border-radius: 5px;
+  border: 1px solid white;
+  display: none;
+  outline: none;
+  outline-style: double;
+  outline-color: black;
+}
 /* End Header */
 /* Start Landing */
 .landing {
@@ -651,6 +662,7 @@ header nav .form i {
   background-color: var(--main-color);
   height: 100%;
   position: relative;
+  transition: width .3s linear;
 }
 .our-skills .skills .prog-holder .prog span::before {
   content: attr(data-progress);
@@ -663,9 +675,19 @@ header nav .form i {
   width: 40px;
   text-align: center;
   border-radius: 4px;
+  display: none;
 }
+
+.show-pseudo::before,
+.show-pseudo::after {
+  display: block !important;
+  content: attr(data-progress); /* or whatever you were using */
+  transition: progress .3s ease-in-out;
+}
+
 .our-skills .skills .prog-holder .prog span::after {
   content: "";
+  display: none;
   position: absolute;
   border-style: solid;
   border-width: 8px;
@@ -887,6 +909,7 @@ header nav .form i {
 }
 .contact .content form textarea.main-input {
   height: 200px;
+  resize: none;
 }
 .contact .content form input[type="submit"] {
   background-color: var(--main-color);
@@ -980,3 +1003,5 @@ header nav .form i {
   color: var(--main-color);
 }
 /* End Footer */
+
+
