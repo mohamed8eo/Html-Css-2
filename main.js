@@ -1,3 +1,37 @@
+// making toggle for mobile screan 
+let toggle = document.querySelector("nav .toggle-menu");
+let toggleUlli = document.querySelectorAll("header nav .toggle-menu + ul li");
+let array_li = Array.from(toggleUlli);
+let toggleUla = document.querySelectorAll("header nav .toggle-menu + ul li a");
+let array_a = Array.from(toggleUla);
+
+toggle.addEventListener("click", function () {
+    array_li.forEach((li) => {
+        li.style.display = "block"
+
+        // change the active class for a 
+        array_a.forEach((a) => {
+            a.addEventListener("click", function (e) {
+                array_a.forEach((a) => a.classList.remove("active"))
+                e.currentTarget.classList.add("active")
+            })
+        })
+    })
+})
+
+toggleUlli.forEach((li) => {
+    li.addEventListener("click", function (e) {
+        toggleUlli.forEach((li) => {
+            li.style.display = "none";
+        })
+        
+    }
+    )
+})
+
+
+
+
 //making a searhc bar 
 let search_icon = document.querySelector("header nav .form i");
 let search_input = document.querySelector("header nav .form input");
@@ -6,13 +40,15 @@ search_icon.addEventListener("click", function () {
     search_input.style.display = "block";
     search_input.focus(); // Optional: focus the input
 });
-
 // Hide the input when Enter is pressed inside it
 search_input.addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
         search_input.style.display = "none";
     }
 });
+
+
+
 
 // making images section with js 
 const shuffle = document.querySelectorAll(".shuffle li")
@@ -38,8 +74,9 @@ let statsDiv = document.querySelectorAll(".stats .box div ");
 //skills setion 
 const skillsSection = document.querySelector(".our-skills");
 const spanSkills = document.querySelectorAll(".prog span");
-
 let start = false;
+
+
 window.onscroll = function () {
     if (window.scrollY >= statsSection.offsetTop - 450) {
         if (!start) {
@@ -61,7 +98,7 @@ window.onscroll = function () {
         })
     }
 }
-
+// increase the number to the limit 
 function setcounter(el) {
     let goal = el.dataset.number;
     let counter = setInterval(() => {
@@ -72,3 +109,8 @@ function setcounter(el) {
     }, 10);
 }
 
+
+// Dynamic chage for the copyright year in footer 
+let spanyear = document.querySelector("#currentyear");
+let currentyear = new Date();
+spanyear.innerText = currentyear.getFullYear();

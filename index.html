@@ -25,23 +25,23 @@
         <nav>
           <i class="fas fa-bars toggle-menu"></i>
           <ul>
-            <li><a class="active menu-links" href="#">Home</a></li>
-            <li><a class="menu-links" href="#">Services</a></li>
-            <li><a class="menu-links" href="#">Portfolio</a></li>
-            <li><a class="menu-links" href="#">About</a></li>
-            <li><a class="menu-links" href="#">Pricing</a></li>
-            <li><a class="menu-links" href="#">Contact</a></li>
+            <li><a data-home="Home" class="active  menu-links" href="#Home page">Home</a></li>
+            <li><a class="menu-links" href="#Services">Services</a></li>
+            <li><a class="menu-links" href="#Portfolio">Portfolio</a></li>
+            <li><a class="menu-links" href="#About">About</a></li>
+            <li><a class="menu-links" href="#Pricing">Pricing</a></li>
+            <li><a class="menu-links" href="#Contact">Contact</a></li>
           </ul>
           <div class="form">
             <i class="fas fa-search"></i>
-            <input type="text" class="search-input" value="Search">
+            <input type="text" class="search-input" placeholder="Search">
           </div>
         </nav>
       </div>
     </header>
     <!-- End Header -->
     <!-- Start Landing -->
-    <div class="landing">
+    <div class="landing" id="Home page">
       <div class="overlay"></div>
       <div class="text">
         <div class="content">
@@ -66,7 +66,7 @@
     </div>
     <!-- End Landing -->
     <!-- Start Services -->
-    <div class="services">
+    <div class="services" id="Services">
       <div class="container">
         <div class="main-heading">
           <h2>Services</h2>
@@ -137,7 +137,7 @@
     </div>
     <!-- End Design -->
     <!-- Start Portfolio -->
-    <div class="portfolio">
+    <div class="portfolio" id="Portfolio">
       <div class="container">
         <div class="main-heading">
           <h2>Portfolio</h2>
@@ -170,13 +170,6 @@
           </div>
         </div>
         <div class="box one">
-          <img src="images/pexels-tirachard-kumtanom-112571-347145.jpg" alt="" />
-          <div class="caption">
-            <h4>Awesome Image</h4>
-            <p>Photography</p>
-          </div>
-        </div>
-        <div class="box one">
           <img src="images/pexels-veeterzy-38136.jpg" alt="" />
           <div class="caption">
             <h4>Awesome Image</h4>
@@ -185,27 +178,6 @@
         </div>
         <div class="box two">
           <img src="images/shuffle-03.jpg" alt="" />
-          <div class="caption">
-            <h4>Awesome Image</h4>
-            <p>Photography</p>
-          </div>
-        </div>
-        <div class="box two">
-          <img src="images/shuffle-04.jpg" alt="" />
-          <div class="caption">
-            <h4>Awesome Image</h4>
-            <p>Photography</p>
-          </div>
-        </div>
-        <div class="box two">
-          <img src="images/pexels-denis-linine-214373-753772.jpg" alt="" />
-          <div class="caption">
-            <h4>Awesome Image</h4>
-            <p>Photography</p>
-          </div>
-        </div>
-        <div class="box two">
-          <img src="images/pexels-liger-pham-232622-1108701.jpg" alt="" />
           <div class="caption">
             <h4>Awesome Image</h4>
             <p>Photography</p>
@@ -232,6 +204,13 @@
             <p>Photography</p>
           </div>
         </div>
+        <div class="box two">
+          <img src="images/pexels-denis-linine-214373-753772.jpg" alt="" />
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p>Photography</p>
+          </div>
+        </div>
         <div class="box four">
           <img src="images/shuffle-08.jpg" alt="" />
           <div class="caption">
@@ -240,14 +219,21 @@
           </div>
         </div>
         <div class="box four">
-          <img src="images/38b8abab-2ea9-4b97-971b-788aff99933c.jpg" alt="" />
+          <img src="images/pexels-belle-co-99483-846350.jpg" alt="" />
           <div class="caption">
             <h4>Awesome Image</h4>
             <p>Photography</p>
           </div>
         </div>
-        <div class="box four">
-          <img src="images/pexels-belle-co-99483-846350.jpg" alt="" />
+        <div class="box two">
+          <img src="images/shuffle-04.jpg" alt="" />
+          <div class="caption">
+            <h4>Awesome Image</h4>
+            <p>Photography</p>
+          </div>
+        </div>
+        <div class="box two">
+          <img src="images/pexels-liger-pham-232622-1108701.jpg" alt="" />
           <div class="caption">
             <h4>Awesome Image</h4>
             <p>Photography</p>
@@ -270,7 +256,7 @@
     </div>
     <!-- End Video -->
     <!-- Start About -->
-    <div class="about">
+    <div class="about" id="About">
       <div class="container">
         <div class="main-heading">
           <h2>About Us</h2>
@@ -383,7 +369,7 @@
     </div>
     <!-- End Quote -->
     <!-- Start Pricing -->
-    <div class="pricing">
+    <div class="pricing" id="Pricing">
       <div class="container">
         <div class="main-heading">
           <h2>Pricing</h2>
@@ -474,7 +460,7 @@
     </div>
     <!-- End Subscribe -->
     <!-- Start Contact -->
-    <div class="contact">
+    <div class="contact" id="Contact">
       <div class="container">
         <div class="main-heading">
           <h2>Contact Us</h2>
@@ -507,12 +493,20 @@
         <img src="images/logo.png" alt="Logo" />
         <p>We Are Social</p>
         <div class="social-icons">
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fas fa-home"></i>
-          <i class="fab fa-linkedin"></i>
+            <a class="links-for-web-page" href="https://www.facebook.com/shfhfdyrdgfdhfdgfxvgf/" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://x.com/mohamed_ma77709" class="links-for-web-page" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#Home page" class="links-for-web-page">
+              <i class="fas fa-home"></i>
+            </a>
+            <a class="links-for-web-page" href="https://www.linkedin.com/in/mohamed-mohamed-487184253/?originalSubdomain=eg " target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
         </div>
-        <p class="copyright">&copy; 2021 <span>Kasper</span> All Right Reserved</p>
+        <p class="copyright">&copy; <span id="currentyear">2021</span> <span class="kasper">Kasper</span> All Right Reserved</p>
       </div>
     </div>
     <!-- End Footer -->
